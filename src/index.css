@@ -1,0 +1,25 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Open Sans', system-ui, sans-serif;
+  color: #333;
+}
+
+@layer components {
+  .btn-green {
+    @apply bg-[#009A44] text-white px-5 py-2.5 rounded font-semibold hover:bg-[#00783A] transition-colors duration-200 inline-flex items-center gap-2 text-sm;
+  }
+  .btn-outline {
+    @apply border-2 border-[#009A44] text-[#009A44] px-5 py-2.5 rounded font-semibold hover:bg-[#E8F5EE] transition-colors duration-200 inline-flex items-center gap-2 text-sm;
+  }
+  .btn-white {
+    @apply bg-white text-[#009A44] px-5 py-2.5 rounded font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center gap-2 text-sm;
+  }
+  .nav-link {
+    @apply text-gray-700 hover:text-[#009A44] transition-colors duration-200 font-medium text-sm;
+  }
+}
