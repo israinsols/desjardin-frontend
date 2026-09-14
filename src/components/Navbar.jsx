@@ -373,7 +373,7 @@ export default function Navbar() {
                             e.target.style.display = "none";
                           }}
                         />
-                        <span className="font-bold text-xs text-gray-800">{t.nav.desjardinsInsurance}</span>
+                        {/* <span className="font-bold text-xs text-gray-800">{t.nav.desjardinsInsurance}</span> */}
                       </div>
                       <button
                         onClick={handleGoLogin}
@@ -396,7 +396,7 @@ export default function Navbar() {
                             e.target.style.display = "none";
                           }}
                         />
-                        <span className="font-bold text-xs text-gray-800">{t.nav.desjardinsDisnat}</span>
+                        {/* <span className="font-bold text-xs text-gray-800">{t.nav.desjardinsDisnat}</span> */}
                       </div>
                       <button
                         onClick={handleGoLogin}
@@ -419,7 +419,7 @@ export default function Navbar() {
                             e.target.style.display = "none";
                           }}
                         />
-                        <span className="font-bold text-xs text-gray-800">{t.nav.wealthManagement}</span>
+                        {/* <span className="font-bold text-xs text-gray-800">{t.nav.wealthManagement}</span> */}
                       </div>
                       <button
                         onClick={handleGoLogin}
@@ -438,17 +438,23 @@ export default function Navbar() {
                       className="w-full border border-gray-400 bg-white rounded-lg px-3 py-2 text-sm font-medium text-gray-800"
                     >
                       <option value="" disabled>{t.nav.select}</option>
-                      <optgroup label={t.nav.personal}>
-                        <option value="private-mgt">Desjardins Gestion privée</option>
+                      <optgroup label={t.nav.personal} className="font-semibold"> 
+                        <option value="private-mgt">Gestion privée Desjardins</option>
                         <option value="signature">Service Signature</option>
                         <option value="ind-ins">Assurance individuelle</option>
-                        <option value="grs-members">Régimes collectifs de retraite</option>
-                        <option value="gi-members">Assurance collective</option>
+                        <option value="grs-members">Épargne-retraite collective - Participants</option>
+                        <option value="gi-members">Assurance collective - Adhérents</option>
+                        <option value="gi-members">Épargne individuelle - Fonds de placement garanti Desjardins Bank en ligne - États-Unis</option>
                       </optgroup>
-                      <optgroup label={t.nav.business}>
+                      <optgroup label={t.nav.business} className="font-semibold">
                         <option value="gi-admin">Assurance collective - Administrateurs</option>
-                        <option value="employer-d">Service de paie Employeur D</option>
-                        <option value="trust">Services de fiducie</option>
+                        <option value="employer-d">Employeur D paie </option>
+                        <option value="trust">Épargne-retraite collective - Promoteurs</option>
+                        <option value="trust">Fiducie - Garde de valeurs</option>
+                        <option value="trust">LC Express D</option>
+                        <option value="trust">Votre portefeuille en Fonds Desjardins</option>
+                        <option value="trust">Desjardins Bank en ligne - États-Unis (en anglais seulement)</option>
+                        <option value="trust">Affacturage Desjardins</option>
                       </optgroup>
                     </select>
                     <div>

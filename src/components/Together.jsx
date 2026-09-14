@@ -59,13 +59,13 @@ export default function Together() {
 
           <div className="flex justify-center md:justify-end">
             <div className="relative max-w-md w-full">
-              <div className="absolute -top-4 right-12 w-28 h-10 bg-[#00874e] transform -rotate-12 rounded-sm z-10 shadow-sm"></div>
+              {/* <div className="absolute -top-4 right-12 w-28 h-10 bg-[#00874e] transform -rotate-12 rounded-sm z-10 shadow-sm"></div> */}
               
-              <div className="relative overflow-hidden rounded-2xl shadow-md border-2 border-white/40">
+              <div className="relative overflow-hidden rounded-2xl  ">
                 <img
                   src={imageUrl}
                   alt={t.together.title}
-                  className="w-full h-80 object-cover"
+                  className="w-full h-full"
                   onError={(e) => {
                     e.target.src =
                       "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80";
@@ -73,7 +73,7 @@ export default function Together() {
                 />
               </div>
 
-              <div className="absolute -bottom-3 right-4 w-28 h-10 bg-[#00874e] transform -rotate-12 rounded-sm z-10 shadow-sm"></div>
+              {/* <div className="absolute -bottom-3 right-4 w-28 h-10 bg-[#00874e] transform -rotate-12 rounded-sm z-10 shadow-sm"></div> */}
             </div>
           </div>
         </div>
@@ -90,9 +90,9 @@ export default function Together() {
             {t.together.memberText2}
             <sup className="text-xs ml-1 text-gray-600">[ 4 ]</sup>
           </p>
-          <p className="text-xs font-semibold text-gray-600 pt-1">
+          {/* <p className="text-xs font-semibold text-gray-600 pt-1">
             {t.together.ready}
-          </p>
+          </p> */}
           <div className="pt-1">
             <a
               href="#"
