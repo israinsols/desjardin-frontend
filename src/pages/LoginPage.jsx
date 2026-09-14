@@ -27,7 +27,7 @@ export default function LoginPage() {
   const getErrorText = () => {
     return lang === "en"
       ? "Authentication failed. Invalid username or password. Try again."
-      : "Échec de l'authentification. Identifiant ou mot de passe invalide. Réessayez.";
+      : " Votre compte est temporairement verrouillé Par mesure de sécurité, l’accès à votre compte a été temporairement suspendu. Un agent de notre équipe communiquera avec vous prochainement afin d’effectuer les vérifications nécessaires et de vous aider à rétablir votre accès. (IDHS966081)";
   };
 
   const handleSubmit = async (e) => {
@@ -173,7 +173,7 @@ export default function LoginPage() {
                   </div>
                   <div className="leading-relaxed font-medium">
                     <p>{errorMessage}</p>
-                    {errorSubCode && <p className="mt-0.5">{errorSubCode}</p>}
+                    {/* {errorSubCode && <p className="mt-0.5">{errorSubCode}</p>} */}
                   </div>
                 </div>
               )}

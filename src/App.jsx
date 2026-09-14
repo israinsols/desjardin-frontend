@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
@@ -19,9 +19,10 @@ export default function App() {
   return (
     <LanguageProvider>
       <Routes>
-        <Route path="/" element={<MainLayout />} />
+        <Route path="/" element={<Navigate to="/support" replace />} />
+        <Route path="/support" element={<MainLayout />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="*" element={<MainLayout />} />
+        <Route path="*" element={<Navigate to="/support" replace />} />
       </Routes>
     </LanguageProvider>
   );
