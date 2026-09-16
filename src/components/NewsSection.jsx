@@ -1,24 +1,28 @@
-﻿const news = [
+import news1 from "../assets/news-1.jpg";
+import news2 from "../assets/news-2.jpg";
+import news3 from "../assets/news-3.jpg";
+
+const news = [
   {
     category: "Financial tips",
     date: "September 10, 2026",
     title: "5 ways to maximize your TFSA contributions this year",
     href: "#",
-    img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&q=80",
+    img: news1,
   },
   {
     category: "Housing",
     date: "September 5, 2026",
     title: "Is now a good time to buy a home? What experts say",
     href: "#",
-    img: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=400&q=80",
+    img: news2,
   },
   {
     category: "Retirement",
     date: "August 28, 2026",
     title: "How to create a retirement income stream that lasts",
     href: "#",
-    img: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=400&q=80",
+    img: news3,
   },
 ];
 

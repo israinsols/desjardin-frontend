@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
+import countOnUs1 from "../assets/count-on-us-1.jpg";
+import countOnUs2 from "../assets/count-on-us-2.jpg";
 
 export default function CountOnUs() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const { t } = useLanguage();
 
-  const articleImages = [
-    "https://www.desjardins.com/en/tips/how-home-insurance-premiums-are-calculated.thumb.768.768.jpg",
-    "https://www.desjardins.com/en/tips/deep-clean-finances.thumb.768.768.jpg",
-  ];
+  const articleImages = [countOnUs1, countOnUs2];
 
   return (
     <section className="bg-[#F2F4F5] py-14 px-4">
@@ -32,8 +31,8 @@ export default function CountOnUs() {
                 onClick={() => setSelectedIndex(idx)}
                 className={`bg-white rounded-2xl overflow-hidden shadow-sm transition-all duration-200 block flex flex-col justify-between ${
                   isSelected
-                    ? "ring-2 ring-[#0066CC] shadow-md"
-                    : "hover:shadow-md border border-gray-200/60"
+                    ? "hover:ring-2 ring-[#0066CC] shadow-md"
+                    : "shadow-md hover:ring-2 ring-[#0066CC] shadow-md"
                 }`}
               >
                 <div className="h-56 md:h-64 overflow-hidden bg-gray-100">
@@ -41,10 +40,6 @@ export default function CountOnUs() {
                     src={articleImages[idx]}
                     alt={item.title}
                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                    onError={(e) => {
-                      e.target.src =
-                        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80";
-                    }}
                   />
                 </div>
 

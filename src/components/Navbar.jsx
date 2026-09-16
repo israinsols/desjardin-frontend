@@ -1,6 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
+import logoAccesD from "../assets/accesd.svg";
+import logoAccesDaffair from "../assets/accesdaffair.svg";
+import logoInsurance from "../assets/logo-assurance-e.svg";
+import logoBrokerage from "../assets/courtage-en-ligne-en.svg";
+import logoSecurities from "../assets/gestion-patrimoine-en.svg";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -20,15 +25,6 @@ export default function Navbar() {
   useEffect(() => {
     setSelectedLang(lang);
   }, [lang]);
-
-  const logoAccesD =
-    "https://www.desjardins.com/content/dam/images/logo/particuliers/accesd.svg";
-  const logoInsurance =
-    "https://www.desjardins.com/content/dam/images/logo/assurances/logo-assurance-e.svg";
-  const logoBrokerage =
-    "https://www.desjardins.com/content/dam/images/logo/particuliers/courtage-en-ligne-en.svg";
-  const logoSecurities =
-    "https://www.desjardins.com/content/dam/images/logo/particuliers/gestion-patrimoine-en.svg";
 
   const handleGoLogin = () => {
     setLoginOpen(false);
@@ -338,7 +334,17 @@ export default function Navbar() {
                             e.target.style.display = "none";
                           }}
                         />
-                        <span className="font-bold italic text-base text-gray-800">AccèsD</span>
+                       
+                        <img
+                          src={logoAccesDaffair}
+                          alt="AccèsD"
+                          className="h-7 w-auto object-contain"
+                          onError={(e) => {
+                            e.target.style.display = "none";
+                          }}
+                        />
+                       
+                        {/* <span className="font-bold italic text-base text-gray-800">AccèsD</span> */}
                       </div>
                       <button
                         onClick={handleGoLogin}

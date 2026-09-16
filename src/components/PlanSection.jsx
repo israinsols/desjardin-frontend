@@ -1,4 +1,6 @@
-﻿const plans = [
+import planProjectsImg from "../assets/plan-projects.png";
+
+const plans = [
   {
     icon: "🏠",
     title: "Become a homeowner",
@@ -33,13 +35,9 @@ export default function PlanSection() {
         <div className="flex-1 flex justify-center">
           <div className="relative">
             <img
-              src="https://www.desjardins.com/content/dam/images/illustrations/accueil/illustration-planifier-projets.png"
+              src={planProjectsImg}
               alt="Plan your projects"
               className="w-full max-w-sm rounded-2xl"
-              onError={(e) => {
-                e.target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80";
-                e.target.className = "w-full max-w-sm rounded-2xl object-cover h-72";
-              }}
             />
           </div>
         </div>

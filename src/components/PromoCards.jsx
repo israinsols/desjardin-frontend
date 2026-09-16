@@ -1,11 +1,15 @@
-﻿const promos = [
+import promo1 from "../assets/promo-1.jpg";
+import promo2 from "../assets/promo-2.jpg";
+import promo3 from "../assets/promo-3.jpg";
+
+const promos = [
   {
     tag: "Mortgage",
     title: "Your dream home is within reach",
     desc: "Take advantage of competitive mortgage rates and personalized guidance from our advisors.",
     cta: "Explore mortgages",
     color: "bg-[#E8F5EE]",
-    img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&q=80",
+    img: promo1,
   },
   {
     tag: "Savings",
@@ -13,7 +17,7 @@
     desc: "Open a TFSA, RRSP or FHSA today and start building the future you want.",
     cta: "Start saving",
     color: "bg-blue-50",
-    img: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400&q=80",
+    img: promo2,
   },
   {
     tag: "Insurance",
@@ -21,7 +25,7 @@
     desc: "Home, auto, and life insurance designed to give you peace of mind every day.",
     cta: "Get a quote",
     color: "bg-orange-50",
-    img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&q=80",
+    img: promo3,
   },
 ];
 

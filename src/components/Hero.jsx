@@ -1,9 +1,8 @@
 import { useLanguage } from "../context/LanguageContext";
+import heroBannerImg from "../assets/hero-banner.jpg";
 
 export default function Hero() {
   const { t } = useLanguage();
-  const imageUrl =
-    "https://www.desjardins.com/content/dam/target/0057/vitrine-nouveaux-arrivants.jpg";
 
   return (
     <section className="bg-white w-full">
@@ -38,13 +37,9 @@ export default function Hero() {
           {/* Right Column - Full Height Image */}
           <div className="w-full md:w-1/2 relative min-h-[380px] md:min-h-[500px]">
             <img
-              src={imageUrl}
+              src={heroBannerImg}
               alt={t.hero.title}
               className="w-full h-full object-cover"
-              onError={(e) => {
-                e.target.src =
-                  "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80";
-              }}
             />
           </div>
         </div>

@@ -1,9 +1,10 @@
 import { useLanguage } from "../context/LanguageContext";
+import onlineServicesImg from "../assets/services-en-ligne.jpg";
+import appStoreBadge from "../assets/app-store-badge.svg";
+import googlePlayBadge from "../assets/google-play-badge.svg";
 
 export default function OnlineAccess() {
   const { t } = useLanguage();
-  const imageUrl =
-    "https://www.desjardins.com/content/experience-fragments/dcom/en/particuliers/accueil/services-en-ligne/master/_jcr_content/root/container_1685205247/container/image.coreimg.85.600.jpeg/1752775116031/services-en-ligne-qc-oc.jpeg";
 
   return (
     <section className="bg-[#E9EEEE] py-16 px-4">
@@ -11,13 +12,9 @@ export default function OnlineAccess() {
         <div className="w-full md:w-5/12 flex justify-center">
           <div className="overflow-hidden rounded-2xl shadow-sm border border-black/5 w-full max-w-md">
             <img
-              src={imageUrl}
+              src={onlineServicesImg}
               alt={t.onlineAccess.title}
               className="w-full h-auto object-cover"
-              onError={(e) => {
-                e.target.src =
-                  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80";
-              }}
             />
           </div>
         </div>
@@ -73,12 +70,9 @@ export default function OnlineAccess() {
                 className="hover:opacity-90 transition-opacity"
               >
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                  src={appStoreBadge}
                   alt="App Store"
                   className="h-10"
-                  onError={(e) => {
-                    e.target.parentElement.innerHTML = `<div class="bg-black text-white text-xs rounded-lg px-4 py-2.5 font-semibold flex items-center gap-2"><span>🍎 App Store</span></div>`;
-                  }}
                 />
               </a>
               <a
@@ -88,12 +82,9 @@ export default function OnlineAccess() {
                 className="hover:opacity-90 transition-opacity"
               >
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                  src={googlePlayBadge}
                   alt="Google Play"
                   className="h-10"
-                  onError={(e) => {
-                    e.target.parentElement.innerHTML = `<div class="bg-black text-white text-xs rounded-lg px-4 py-2.5 font-semibold flex items-center gap-2"><span>▶ Google Play</span></div>`;
-                  }}
                 />
               </a>
             </div>

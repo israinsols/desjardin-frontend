@@ -1,4 +1,6 @@
-﻿export default function CoopSection() {
+import coopImg from "../assets/desjardins-cooperative.png";
+
+export default function CoopSection() {
   return (
     <section className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-4">
@@ -28,12 +30,9 @@
           {/* Image */}
           <div className="flex-1 flex justify-center">
             <img
-              src="https://www.desjardins.com/content/dam/images/photos/accueil/desjardins-cooperative.png"
+              src={coopImg}
               alt="Desjardins Cooperative"
               className="rounded-2xl shadow-lg w-full max-w-md object-cover"
-              onError={(e) => {
-                e.target.src = "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80";
-              }}
             />
           </div>
         </div>

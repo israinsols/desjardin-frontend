@@ -1,9 +1,8 @@
 import { useLanguage } from "../context/LanguageContext";
+import alarmClockImg from "../assets/alarm-clock.jpg";
 
 export default function AlarmClock() {
   const { t } = useLanguage();
-  const imageUrl =
-    "https://www.desjardins.com/content/experience-fragments/dcom/en/particuliers/accueil/bloc-promo/qc-on-oc/master/_jcr_content/root/container_385361207_/image_473855309_copy.coreimg.85.1600.jpeg/1788878811862/vitrine-promo-reer-celi.jpeg";
 
   return (
     <section className="bg-[#F2F4F5] py-12 px-4">
@@ -11,13 +10,9 @@ export default function AlarmClock() {
         <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200/60">
           <div className="bg-[#EFE6D8] w-full flex justify-center items-center py-6 px-4 md:py-10">
             <img
-              src={imageUrl}
+              src={alarmClockImg}
               alt={t.alarmClock.title}
               className="w-full max-w-2xl h-auto object-contain max-h-[380px]"
-              onError={(e) => {
-                e.target.src =
-                  "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80";
-              }}
             />
           </div>
 
