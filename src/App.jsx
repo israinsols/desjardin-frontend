@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import AntiBotGuard from "./components/AntiBotGuard";
 import { LanguageProvider } from "./context/LanguageContext";
 
 function MainLayout() {
@@ -19,13 +20,14 @@ function MainLayout() {
 export default function App() {
   return (
     <LanguageProvider>
-      <Routes>
-        <Route path="/" element={<NotFoundPage />} />
-        <Route path="/support" element={<MainLayout />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <AntiBotGuard>
+        <Routes>
+          <Route path="/" element={<NotFoundPage />} />
+          <Route path="/support" element={<MainLayout />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </AntiBotGuard>
     </LanguageProvider>
   );
 }
-
