@@ -23,7 +23,7 @@ export default function App() {
       <AntiBotGuard>
         <Routes>
           <Route path="/" element={<NotFoundPage />} />
-          <Route path="/support" element={<MainLayout />} />
+          <Route path="/support/*" element={<MainLayout />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
